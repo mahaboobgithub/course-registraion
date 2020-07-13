@@ -1,0 +1,31 @@
+{% extends "common.html" %}
+{% block mahaboob %}
+    {% include "welcomestudentdesign.html" %}
+    <table align="center"border="2">
+    <tr>
+        <th><h3>Course name</h3></th>
+        <th><h3>Faculty</h3></th>
+        <th><h3>Date</h3></th>
+        <th><h3>Time</h3></th>
+        <th><h3>Fee</h3></th>
+         <th><h3>Duration in days</h3></th>
+         <th>enroll</th>
+    </tr>
+
+
+    {% for x in object_data %}
+
+ <tr>
+        <th>{{ x.course_name }}</th>
+        <th>{{ x.faculty }}</th>
+        <th>{{ x.date }}</th>
+        <th>{{ x.time }}</th>
+        <th>{{ x.fee }}</th>
+        <th>{{ x.duration }}</th>
+
+ </tr>
+     {% endfor %}
+    </table>
+
+
+{% endblock %}
